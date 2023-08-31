@@ -3,5 +3,23 @@
     <string name="Wifi_off">Wifi off</string>
     <string name="Wifi_on">Wifi on</string>
     <string name="wifiIntentAction">gesturesuite.wifi.action</string>
-    <string name="IntentActionExtra">WifiAction</string>
+    <string name="bluetoothIntentAction">gesturesuite.bluetooth.action</string>
+    <string name="WifiIntentActionExtra">WifiAction</string>
+    <string name="BluetoothIntentActionExtra">BluetoothAction</string>
+    <string name="Bluetooth_on">Bluetooth on</string>
+    <string name="Bluetooth_off">Bluetooth off</string>
+    <string name="Bluetooth_Discoverable_on">Bluetooth discoverable on</string>
+    <string name="Bluetooth_Discoverable_off">Bluetooth discoverable off</string>
+    <string name="Error_accessing_bluetooth_adapter">Error accessing bluetooth adapter</string>
+    <string name="bluetooth_permission_dialog">You must grant the bluetooth permission in order to allow this plugin to change the bluetooth status but you have permanently denied it. Go to the app\'s settings to grant the permission</string>
+    <string name="packageName">com.gesturesuite.wifiplugin</string>
+    <string name="text_for_13_and_above">This app is a plug in for Gesture Suite. It is used in order to enable/disable Wifi in devices that run Android 10 and above and to change the bluetooth status for devices that run Android 13 and above</string>
+    <string name="text_for_before_13">This app is a plug in for Gesture Suite. It is used in order to enable/disable Wifi in devices that run Android 10 and above.</string>
+    <string name="bluetooth_permission_warning">Bluetooth permission needed for changing bluetooth status</string>
+    <string name="Grant_bluetooth_permission">Grant bluetooth permission</string>
+    <string name="Attention">Attention</string>
+    <string name="bluetooth_permission_issue_on_android_13">This app is built for older android versions so that it can bypass the restrictions that Google enforces on newer apps. This is how this plugin is able to change your bluetooth status. Because of that there is an issue with the permissions compatibility. If you grant the bluetooth permission and then go manually in settings and disable it then you will not be able to grant it again because it has been replaced by the \'Near devices\' permission.\n\nThe app will think it has the bluetooth permission but trying to change the bluetooth status will not work. You will need to clear this app\'s data and then grant the bluetooth permission when the app asks for it.</string>
+    <string name="Close">Close</string>
+    <string name="Bluetooth_permission_granted">Bluetooth permission granted</string>
+
 </resources>

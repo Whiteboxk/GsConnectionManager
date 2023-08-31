@@ -7,20 +7,93 @@
     android:padding="20dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="28sp"
-        android:text="This app is a plug in for Gesture Suite. It is used in order to enable/disable Wifi in devices that run Android 10 and above."
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/closeBtn"
+        android:layout_height="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="@string/text_for_13_and_above"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <LinearLayout
+                android:id="@+id/bluetoothLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/bluetoothPermissionGrantedTv"
+                    android:layout_marginTop="20dp"
+                    android:textSize="17sp"
+                    android:text="@string/Bluetooth_permission_granted"
+                    android:textColor="#00ff00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:id="@+id/bluetoothPermissionNotGrantedLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:textSize="17sp"
+                        android:text="@string/bluetooth_permission_warning"
+                        android:textColor="#ff0000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <Button
+                        android:id="@+id/requestBluetoothPermissionBtn"
+                        android:text="@string/Grant_bluetooth_permission"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:textStyle="bold"
+                    android:text="@string/Attention"
+                    android:textSize="19sp"
+                    android:textColor="#ff0000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:text="@string/bluetooth_permission_issue_on_android_13"
+                    android:textSize="17sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
 
     <Button
         android:id="@+id/closeBtn"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:text="Close"
+        android:text="@string/Close"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

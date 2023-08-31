@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.gesturesuite.wifiplugin">
+    xmlns:tools="http://schemas.android.com/tools">
+
 
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.NEARBY_WIFI_DEVICES" />
 
     <application
         android:allowBackup="true"
@@ -22,14 +29,18 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".PermissionAsker"/>
+
         <receiver android:name=".GestureSuiteWifiPlugInReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
                 <action android:name="@string/wifiIntentAction" />
+                <action android:name="@string/bluetoothIntentAction" />
             </intent-filter>
         </receiver>
 
     </application>
+
 
 </manifest>

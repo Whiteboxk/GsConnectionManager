@@ -5,6 +5,7 @@ import android.net.wifi.WifiManager
 import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
+import com.gesturesuite.wifiplugin.Utils.Companion.toast
 
 class WifiHandler {
     companion object{
@@ -33,8 +34,6 @@ class WifiHandler {
             }
         }
 
-        fun toast(context: Context, @StringRes stringResId: Int){
-            Toast.makeText(context, context.getString(stringResId), Toast.LENGTH_LONG).show()
-        }
+
     }
 }
