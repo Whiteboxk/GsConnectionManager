@@ -8,7 +8,7 @@ GsConnectionManager is able to change the wifi and bluetooth state because it's 
 
 Steps to install:
 
-1. Download the GsConnectionManager_1.0.apk file that is at the root of the repository. You can use the link https://github.com/Whiteboxk/GsConnectionManager/raw/master/GsConnectionManager_1.0.apk
+1. Download the GsConnectionManager apk file from the latest release. You can use the link https://github.com/Whiteboxk/GsConnectionManager/releases/download/GsConnectionManager_1.0/GsConnectionManager_1.0.apk
 2. Open the downloaded file.
 3. Allow installation.
 
