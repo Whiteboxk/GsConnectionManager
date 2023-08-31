@@ -1,12 +1,11 @@
-package com.gesturesuite.wifiplugin
+package com.gesturesuite.connectionplugin
 
 import android.Manifest
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.app.ActivityCompat
 import androidx.core.view.isVisible
-import com.gesturesuite.wifiplugin.databinding.ActivityMainBinding
+import com.gesturesuite.connectionplugin.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,9 +13,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        setUiState()
         b = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(b.root)
+        setUiState()
 
         b.requestBluetoothPermissionBtn.setOnClickListener {
             if (Utils.isAndroid12ndAbove()) {

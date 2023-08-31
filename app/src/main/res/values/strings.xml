@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GestureSuiteWifiPlugin</string>
+    <string name="app_name">GestureSuiteConnectionPlugin</string>
     <string name="Wifi_off">Wifi off</string>
     <string name="Wifi_on">Wifi on</string>
     <string name="wifiIntentAction">gesturesuite.wifi.action</string>
@@ -12,7 +12,6 @@
     <string name="Bluetooth_Discoverable_off">Bluetooth discoverable off</string>
     <string name="Error_accessing_bluetooth_adapter">Error accessing bluetooth adapter</string>
     <string name="bluetooth_permission_dialog">You must grant the bluetooth permission in order to allow this plugin to change the bluetooth status but you have permanently denied it. Go to the app\'s settings to grant the permission</string>
-    <string name="packageName">com.gesturesuite.wifiplugin</string>
     <string name="text_for_13_and_above">This app is a plug in for Gesture Suite. It is used in order to enable/disable Wifi in devices that run Android 10 and above and to change the bluetooth status for devices that run Android 13 and above</string>
     <string name="text_for_before_13">This app is a plug in for Gesture Suite. It is used in order to enable/disable Wifi in devices that run Android 10 and above.</string>
     <string name="bluetooth_permission_warning">Bluetooth permission needed for changing bluetooth status</string>

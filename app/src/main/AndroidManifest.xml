@@ -18,7 +18,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.GestureSuiteWifiPlugin">
+        android:theme="@style/Theme.GsConnectionManager">
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -31,7 +31,7 @@
 
         <activity android:name=".PermissionAsker"/>
 
-        <receiver android:name=".GestureSuiteWifiPlugInReceiver"
+        <receiver android:name=".GsConnectionManagerReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>

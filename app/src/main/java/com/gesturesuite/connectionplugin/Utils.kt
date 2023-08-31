@@ -1,11 +1,10 @@
-package com.gesturesuite.wifiplugin
+package com.gesturesuite.connectionplugin
 
 import android.app.Activity
 import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Build.VERSION
-import android.os.Build.VERSION_CODES
 import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.core.app.ActivityCompat

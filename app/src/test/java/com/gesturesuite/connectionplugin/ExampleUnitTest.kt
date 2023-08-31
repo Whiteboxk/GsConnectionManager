@@ -1,4 +1,4 @@
-package com.gesturesuite.wifiplugin
+package com.gesturesuite.connectionplugin
 
 import org.junit.Test
 

@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.gesturesuite.wifiplugin'
+    namespace 'com.gesturesuite.connectionplugin'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.gesturesuite.wifiplugin"
+        applicationId "com.gesturesuite.connectionplugin"
         minSdk 21
         targetSdk 28
         versionCode 1
@@ -20,7 +20,7 @@ android {
     applicationVariants.all { variant ->
         variant.outputs.all {
             def versionName = variant.versionName
-            outputFileName = "GestureSuiteWifiPlugin_${versionName}.apk"
+            outputFileName = "GsConnectionManager_${versionName}.apk"
         }
     }
 

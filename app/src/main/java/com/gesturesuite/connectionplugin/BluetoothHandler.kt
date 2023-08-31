@@ -1,11 +1,11 @@
-package com.gesturesuite.wifiplugin
+package com.gesturesuite.connectionplugin
 
 import android.Manifest
 import android.bluetooth.BluetoothAdapter
 import android.content.Context
 import android.content.Intent
-import com.gesturesuite.wifiplugin.Utils.Companion.checkPermission
-import com.gesturesuite.wifiplugin.Utils.Companion.toast
+import com.gesturesuite.connectionplugin.Utils.Companion.checkPermission
+import com.gesturesuite.connectionplugin.Utils.Companion.toast
 
 class BluetoothHandler {
 

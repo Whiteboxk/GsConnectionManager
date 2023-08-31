@@ -1,10 +1,10 @@
-package com.gesturesuite.wifiplugin
+package com.gesturesuite.connectionplugin
 
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 
-class GestureSuiteWifiPlugInReceiver : BroadcastReceiver() {
+class GsConnectionManagerReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent?) {
         intent?.let {

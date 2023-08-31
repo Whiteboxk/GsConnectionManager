@@ -1,4 +1,4 @@
-package com.gesturesuite.wifiplugin
+package com.gesturesuite.connectionplugin
 
 import android.app.Activity
 import android.app.AlertDialog
