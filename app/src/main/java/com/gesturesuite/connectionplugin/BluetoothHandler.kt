@@ -20,7 +20,8 @@ class BluetoothHandler {
 
        fun setBluetoothAdapterEnabled(
            context: Context,
-           action: Int
+           action: Int,
+           toast: Boolean
        ) {
            if(Utils.isAndroid12ndAbove()){
                if(!checkPermission(context, Manifest.permission.BLUETOOTH_CONNECT)){
@@ -40,12 +41,12 @@ class BluetoothHandler {
                return
            }
            when (action) {
-               ON ->setBluetoothAdapterEnabled(mBluetoothAdapter, true, context)
-               OFF ->setBluetoothAdapterEnabled(mBluetoothAdapter, false, context)
-               TOGGLE ->setBluetoothAdapterEnabled(mBluetoothAdapter, !mBluetoothAdapter.isEnabled, context)
-               DISCOVERY_ON ->setBluetoothAdapterDiscoveryMode(true, context)
-               DISCOVERY_OFF ->setBluetoothAdapterDiscoveryMode(false, context)
-               DISCOVERY_TOGGLE -> setBluetoothAdapterDiscoveryMode(mBluetoothAdapter.scanMode != BluetoothAdapter.SCAN_MODE_CONNECTABLE_DISCOVERABLE, context)
+               ON ->setBluetoothAdapterEnabled(mBluetoothAdapter, true, context, toast)
+               OFF ->setBluetoothAdapterEnabled(mBluetoothAdapter, false, context, toast)
+               TOGGLE ->setBluetoothAdapterEnabled(mBluetoothAdapter, !mBluetoothAdapter.isEnabled, context, toast)
+               DISCOVERY_ON ->setBluetoothAdapterDiscoveryMode(true, context, toast)
+               DISCOVERY_OFF ->setBluetoothAdapterDiscoveryMode(false, context, toast)
+               DISCOVERY_TOGGLE -> setBluetoothAdapterDiscoveryMode(mBluetoothAdapter.scanMode != BluetoothAdapter.SCAN_MODE_CONNECTABLE_DISCOVERABLE, context, toast)
            }
         }
 
@@ -53,7 +54,8 @@ class BluetoothHandler {
         private fun setBluetoothAdapterEnabled(
             mBluetoothAdapter: BluetoothAdapter,
             state: Boolean,
-            context: Context
+            context: Context,
+            toast: Boolean
         ) {
 
             try {
@@ -66,26 +68,30 @@ class BluetoothHandler {
             catch(e:Exception){
                 e.printStackTrace()
             }
-            toast(
-                context,
-                context.getString(if (state) R.string.Bluetooth_on else R.string.Bluetooth_off)
-            )
+            if(toast) {
+                toast(
+                    context,
+                    context.getString(if (state) R.string.Bluetooth_on else R.string.Bluetooth_off)
+                )
+            }
         }
 
 
-        private fun setBluetoothAdapterDiscoveryMode(state: Boolean, con: Context) {
+        private fun setBluetoothAdapterDiscoveryMode(state: Boolean, con: Context, toast: Boolean) {
 
             val discoverableIntent = Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE)
             discoverableIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             if (!state) {
                 discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 1)
             }
-            toast(
-                con,
-                con.getString(if(state)R.string.Bluetooth_Discoverable_on else R.string.Bluetooth_Discoverable_off,
-                    state
+            if(toast){
+                toast(
+                    con,
+                    con.getString(if(state)R.string.Bluetooth_Discoverable_on else R.string.Bluetooth_Discoverable_off,
+                        state
+                    )
                 )
-            )
+            }
             con.startActivity(discoverableIntent)
         }
 

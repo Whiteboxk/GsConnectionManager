@@ -11,22 +11,28 @@ class WifiHandler {
         const val OFF = 2
         const val TOGGLE = 3
 
-        public fun wifi(context: Context, action: Int) {
+        public fun wifi(context: Context, action: Int, toast: Boolean) {
             val wifiManager = context.applicationContext.getSystemService(AppCompatActivity.WIFI_SERVICE) as WifiManager?
             wifiManager?.let {
                 when (action) {
                     ON ->  {
                         wifiManager.isWifiEnabled = true
-                        toast(context, R.string.Wifi_on)
+                        if(toast){
+                            toast(context, R.string.Wifi_on)
+                        }
                     }
                     OFF ->  {
                         wifiManager.isWifiEnabled = false
-                        toast(context, R.string.Wifi_off)
+                        if(toast) {
+                            toast(context, R.string.Wifi_off)
+                        }
                     }
                     TOGGLE -> {
                         val newEnabledState = !wifiManager.isWifiEnabled
                         wifiManager.isWifiEnabled = newEnabledState
-                        toast(context, if (newEnabledState) R.string.Wifi_on else R.string.Wifi_off)
+                        if(toast){
+                            toast(context, if (newEnabledState) R.string.Wifi_on else R.string.Wifi_off)
+                        }
                     }
                 }
             }
